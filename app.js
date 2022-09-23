@@ -5,7 +5,7 @@ dotenv.config()
 
 import express from 'express'
 const app = express()
-const port = process.env.PORT || 3000
+const PORT = 3000
 
 
 app.use(express.json());
@@ -20,4 +20,4 @@ app.set('view engine', 'ejs')
 app.use(routes);
 
 
-app.listen(port, () => console.log(`servidor na porta ${port}`))
+app.listen(process.env.PORT || PORT, () => console.log(`servidor na porta ${PORT}`))
