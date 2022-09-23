@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcelo's Web Site</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main class="main">
+      <nav class="menunav">
+        <figure id="logo">
+          <a href="index.html"
+            ><img id="imglogo" src="./logo_site.png" alt="marcelo"
+          /></a>
+        </figure>
+        <div id="navmenu">
+          <a id="close" hidden></a>
+          <a href="./index.html">PROJECTS</a>
+          <a href="">RESUME</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+      </nav>
+      <section class="section">
+        <div class="divcontact">
+          <form action="">
+            <div class="divcontact2">
+              <div id="divname">
+                <label for="name" class="form-label">Name </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Your name"
+                  aria-label="default input example"
+                  id="name"
+                  name="name"
+                />
+              </div>
+              <div id="divemail">
+                <label for="email" class="form-label">Email </label>
+                <input
+                  id="email"
+                  class="form-control"
+                  type="email"
+                  placeholder="Your e-mail"
+                  aria-label="default input example"
+                  name="email"
+                />
+              </div>
+            </div>
+
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Leave your message</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              type="text"
+            ></textarea>
+            <div class="divcontact3">
+              <button id="buttonsubm" type="submit" onclick="savemsg()">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
