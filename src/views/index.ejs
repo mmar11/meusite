@@ -22,24 +22,27 @@
     <link rel="shortcut icon" href="/images/logo_site.png" type="image/x-icon" />
   </head>
   <body>
-    <main class="main">
-      <nav class="menunav">
+    <main class="main"> 
+      
+      <nav class="menunav" >
         <figure id="logo">
           <a href="/"
             ><img id="imglogo" src="/images/logo_site.png" alt="marcelo"
           /></a>
         </figure>
-        <div id="navmenu">
-          <a id="close" hidden></a>
-          <a href="#div3">PROJECTS</a>
-          <a href="/Marcelo-Mariano-Resume.pdf" target=”blank”>RESUME</a>
-          <a href="/contact.ejs">CONTACT</a>
-        </div>
+        <div id="navmenu" class="topnav">
+          <a href="#div3" onclick="topnav()" >PROJECTS</a>
+          <a href="/Marcelo-Mariano-Resume.pdf" target=”blank”  onclick="topnav()">RESUME</a>
+          <a href="mailto:marcelomariano11@gmail.com" onclick="topnav()">CONTACT</a>
+
+        </div>          
+        <a href="javascript:void(0);" id="icon" onclick="responsive()">&#9776;</a>
+        
       </nav>
       <section class="section">
         <div id="div1">
           <h1>Full Stack Developer</h1>
-          <h2>Diving into the world of web development and loving it!</h2>
+          <h5>JAVASCRIPT | NODEJS | PHP | HTML | CSS | MySQL </h5>
           <img
             id="imgphoto"
             src="/images/mmphotoligth.jpg"
@@ -93,7 +96,7 @@
         <div id="projects" class="divtext">
           <div id="project1">
             <div id="hidden1" hidden>
-              <h5>On line feedback APP</h5>
+              <h4>On line feedback APP</h4>
               <a class="aproject" href=""
               >Final project of the PHP formation, manage a database to create
             users and allows on-line feedback and evaluations from users</a>
@@ -101,7 +104,7 @@
           </div>
           <div id="project2">
             <div id="hidden2" hidden >
-              <h5>SMS API - Twilio</h5>
+              <h4>SMS API - Twilio</h4>
               <a class="aproject" href=""
               >API REST that integrates user code to the Twilio SMS API - Email
               API integration under development</a>
@@ -109,7 +112,7 @@
           </div>
           <div id="project3">   
             <div id="hidden3" hidden>
-              <h5>Loan Simulator</h5>
+              <h4>Loan Simulator</h4>
               <a class="aproject" href=""
               >Loan Simulator - Allows users to simulate loans - English version
               under developement

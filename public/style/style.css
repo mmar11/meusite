@@ -34,9 +34,10 @@ body {
 #logo #imglogo {
   height: 100px;
   border-radius: 15px;
+  background-color: transparent;
 }
 
-#navmenu {
+.topnav {
   display: flex;
   flex-direction: row;
   width: 60%;
@@ -44,6 +45,7 @@ body {
   gap: 5px;
   height: 100px;
   align-items: center;
+  transition: all 0.8s ease;
 }
 
 nav > div > a {
@@ -56,6 +58,7 @@ nav > div > a {
   text-align: center;
   width: 150px;
   border-radius: 15px;
+  border: solid 2px #287dae;
 }
 
 nav > div > a:hover {
@@ -92,6 +95,7 @@ nav > div > a:hover {
 #imgphoto {
   margin: 10px;
   border-radius: 15px;
+  min-width: 120px;
 }
 
 #divimg {
@@ -101,6 +105,7 @@ nav > div > a:hover {
   background-position: center;
   background-size: cover;
   margin: auto;
+  border-radius: 10px;
 }
 
 .divtext {
@@ -209,116 +214,60 @@ div input {
   flex-direction: row;
   gap: 5px;
   align-items: center;
+  padding: 10px;
 }
 
 #project1 {
   background: url(/images/senac.png);
   display: grid;
-  color: aliceblue;
   width: 25%;
+  min-width: 200px;
   margin: auto;
   border-radius: 5px;
   text-align: center;
   height: 200px;
   background-position: center;
-  background-size: cover;
-}
-#project1:hover {
-  background: url(/images/senac.png);
-  display: grid;
-  color: aliceblue;
-  width: 25%;
-  margin: auto;
-  border-radius: 5px;
-  text-align: center;
-  height: 200px;
   cursor: pointer;
-  background-position: center;
-  background-size: cover;
-}
-#project2 {
-  background: url(/images/coding.png);
-  display: grid;
-  color: aliceblue;
-  width: 25%;
-  margin: auto;
-  border-radius: 5px;
-  text-align: center;
-  height: 200px;
-  background-position: center;
   background-size: cover;
 }
 
-#project2:hover {
-  background: url(/images/coding.png);
+#project2 {
+  background: url(/images/sms.png);
   display: grid;
-  color: aliceblue;
   width: 25%;
+  min-width: 200px;
   margin: auto;
   border-radius: 5px;
   text-align: center;
   height: 200px;
-  cursor: pointer;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
+
 #project3 {
   background: url(/images/simulador.png);
   display: grid;
-  color: aliceblue;
+  color: rgb(2, 2, 54);
   width: 25%;
+  min-width: 200px;
   margin: auto;
   border-radius: 5px;
   text-align: center;
   height: 200px;
   background-position: center;
   background-size: cover;
-}
-#project3:hover {
-  background: url(/images/simulador.png);
-  display: grid;
-  color: aliceblue;
-  width: 25%;
-  margin: auto;
-  border-radius: 5px;
-  text-align: center;
-  height: 200px;
   cursor: pointer;
-  background-position: center;
-  background-size: cover;
 }
 
-#hidden1 {
+#hidden1,
+#hidden2,
+#hidden3 {
   display: flex;
   flex-direction: column;
   gap: 5px;
   color: rgb(2, 2, 54);
   font-weight: 500;
-  border-radius: 5px;
-  text-align: center;
-  height: 200px;
-  justify-content: center;
-  backdrop-filter: blur(20px);
-}
-
-#hidden2 {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: aliceblue;
-  margin: auto;
-  border-radius: 5px;
-  text-align: center;
-  height: 200px;
-  justify-content: center;
-  backdrop-filter: blur(20px);
-}
-#hidden3 {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: aliceblue;
-  margin: auto;
   border-radius: 5px;
   text-align: center;
   height: 200px;
@@ -327,7 +276,7 @@ div input {
 }
 
 .aproject {
-  color: aliceblue;
+  color: rgb(2, 2, 54);
   font-size: 1.5em;
 }
 
@@ -335,14 +284,13 @@ div > div > a {
   text-decoration: none;
 }
 
+div > div > a:hover {
+  text-decoration: none;
+  color: rgb(2, 2, 54);
+}
 div > #hidden1 > a {
   color: rgb(2, 2, 54);
   font-weight: 500;
-}
-
-div > div > a:hover {
-  text-decoration: none;
-  color: aliceblue;
 }
 
 footer {
@@ -350,10 +298,93 @@ footer {
   margin: 10px auto;
   width: 90%;
   border-radius: 5px;
+  padding: 10px;
 }
 footer > p {
   border: solid 3px #287dae;
   background-color: white;
   color: #287dae;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 699px) {
+  #projects {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+#icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 499px) {
+  .topnav {
+    display: none;
+  }
+
+  #icon {
+    float: right;
+    display: block;
+    text-decoration: none;
+    background-color: #287dae;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.3em;
+    text-align: center;
+    width: 45px;
+    border-radius: 50px;
+    border: solid 2px #287dae;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #icon:hover {
+    float: right;
+    display: block;
+    text-decoration: none;
+    background-color: aliceblue;
+    color: #287dae;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.3em;
+    text-align: center;
+    width: 45px;
+    border-radius: 50px;
+    border: solid 2px #287dae;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 499px) {
+  .topnav.responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 0px;
+    top: 150px;
+    transition: all 0.8s ease;
+
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-right: 100%;
+    }
+
+    to {
+      margin-right: 0%;
+    }
+  }
 }

@@ -38,6 +38,25 @@ function hide(item) {
     item.setAttribute("hidden", "hidden")
 };
 
+
+function responsive() {
+    var x = document.getElementById("navmenu");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+function topnav() {
+    var x = document.getElementById("navmenu");
+    if (x.className === "responsive") {
+        x.className = " topnav";
+    } else {
+        x.className = "topnav";
+    }
+
+}
 //contact form message
 
 // incluir no AWS
