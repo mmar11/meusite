@@ -233,7 +233,8 @@ div input {
 
 #project2 {
   background: url(/images/sms.png);
-  display: grid;
+  background-size: 200px;
+  display: 200px;
   width: 25%;
   min-width: 200px;
   margin: auto;
