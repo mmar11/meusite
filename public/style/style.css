@@ -74,6 +74,41 @@ nav > div > a:hover {
   border-radius: 15px;
 }
 
+#msgsenta {
+  text-decoration: none;
+  background-color: #287dae;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.3em;
+  text-align: center;
+  width: 150px;
+  border-radius: 15px;
+  border: solid 2px #287dae;
+  margin: auto;
+}
+
+#msgsenta:hover {
+  text-decoration: none;
+  background-color: aliceblue;
+  color: #287dae;
+  border: solid 2px #287dae;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.3em;
+  text-align: center;
+  width: 150px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+#msgsent {
+  margin: 50px auto;
+  width: 80%;
+  text-align: center;
+  font-size: 2em;
+}
+
 .section {
   display: flex;
   flex-direction: column;

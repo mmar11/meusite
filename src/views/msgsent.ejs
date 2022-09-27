@@ -44,50 +44,10 @@
         >
       </nav>
       <section class="section">
-        <div class="divcontact">
-          <form action="/contact" method="POST" enctype="multipart/form-data">
-            <div class="divcontact2">
-              <div id="divname">
-                <label for="name" class="form-label">Name </label>
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Your name"
-                  aria-label="default input example"
-                  id="n-ame"
-                  name="name"
-                  required
-                />
-              </div>
-              <div id="divemail">
-                <label for="email" class="form-label" required>Email </label>
-                <input
-                  id="e-mail"
-                  class="form-control"
-                  type="email"
-                  placeholder="Your e-mail"
-                  aria-label="default input example"
-                  name="email"
-                />
-              </div>
-            </div>
-
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Leave your message</label
-            >
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              type="text"
-              name="message"
-              required
-            ></textarea>
-            <div class="divcontact3">
-              <button id="buttonsubm" type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
+        <label id="msgsent" class="form-label"
+          >Message Sent! I will be in touch soon! Thanks!</label
+        >
+        <a id="msgsenta" href="/" onclick="topnav()">BACK</a>
       </section>
     </main>
 
